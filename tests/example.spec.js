@@ -17,3 +17,13 @@ test('get started link', async ({ page }) => {
   // Expects the URL to contain intro.
   await expect(page).toHaveURL(/.*intro/);
 });
+
+test('test dos de prueba', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  // Click the get started link.
+  await page.getByRole('link', { name: 'Get started' }).click();
+
+  // Expects the URL to contain intro.
+  await expect(page).toHaveURL(/.*intro/);
+});
